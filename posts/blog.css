@@ -1,0 +1,392 @@
+:root {
+  --bg: #fff;
+  --text: #1a1a1a;
+  --muted: #6b7280; /* szarość */
+  --accent: #d4af37; /* złoto */
+  --maxw: 76ch;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0b0b0b;
+    --text: #e7e7e7;
+    --muted: #9aa0a6;
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
+/* body {
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.65 system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue',
+    Arial, sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+} */
+
+/* kontener */
+/* .wrap {
+  max-width: var(--maxw);
+  margin: clamp(24px, 5vw, 60px) auto;
+  padding: 0 18px;
+} */
+main.wrap p,
+main.wrap li {
+  opacity: 1;
+  color: var(--text);
+  font-family: inherit; /* вернёт system-ui, заданный на .wrap */
+  letter-spacing: normal;
+  -webkit-font-smoothing: auto;
+}
+.wrap {
+  max-width: var(--maxw);
+  margin: clamp(24px, 5vw, 60px) auto;
+  padding: 0 28px;
+  color: var(--text);
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue',
+    Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+.post-footer {
+  margin-top: 28px;
+  opacity: 1;
+  isolation: isolate;
+}
+
+/* breadcrumbs */
+.breadcrumbs {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+.breadcrumbs a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+.breadcrumbs a:hover {
+  border-color: var(--muted);
+}
+
+/* artykuł */
+article {
+  display: block;
+}
+header h1 {
+  font-size: clamp(28px, 4vw, 44px);
+  line-height: 1.15;
+  margin: 0.2em 0 0.3em;
+}
+.meta {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+.meta strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+/* hero */
+.hero {
+  margin: 22px 0 8px;
+  border-radius: 18px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+.hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.hero figcaption {
+  font-size: 0.9rem;
+  color: var(--muted);
+  padding: 10px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* nagłówki */
+h2 {
+  font-size: clamp(20px, 2.6vw, 28px);
+  margin: 1.6em 0 0.6em;
+  line-height: 1.25;
+  position: relative;
+}
+h2::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 72px;
+  height: 3px;
+  background: var(--accent);
+  border-radius: 2px;
+}
+
+/* tekst */
+p {
+  margin: 0.8em 0;
+}
+ul {
+  margin: 0.6em 0 1em 0.1em;
+}
+li {
+  margin: 0.35em auto;
+}
+p,
+li {
+  hyphens: auto;
+}
+
+/* call-to-action */
+.cta {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 1.4em 0 0;
+}
+.btn {
+  display: inline-block;
+  padding: 12px 18px;
+  border-radius: 14px;
+  text-decoration: none;
+  border: 1px solid var(--accent);
+  transition: 0.2s transform ease, 0.2s box-shadow ease;
+}
+.cta .btn {
+  display: flex;
+}
+.btn--gold {
+  background: var(--accent);
+  color: #111;
+  font-weight: 600;
+}
+.btn--ghost {
+  color: var(--accent);
+}
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(212, 175, 55, 0.25);
+}
+
+/* separator */
+.divider {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(0, 0, 0, 0.12),
+    transparent
+  );
+  margin: 2rem 0;
+}
+
+/* для фоток сравнения в 3м посте */
+.compare {
+  margin: 24px 0;
+}
+.compare--inline {
+  display: grid;
+  gap: 16px;
+}
+.compare--inline {
+  grid-template-columns: 1fr;
+}
+@media (min-width: 900px) {
+  .compare--inline {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.compare-item img,
+.compare-row img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+.compare-item figcaption,
+.compare-row figcaption {
+  font-size: 0.95rem;
+  opacity: 0.8;
+  margin-top: 6px;
+}
+.compare--stack .compare-row {
+  margin: 16px 0;
+}
+
+/* stopka */
+
+@media (max-width: 768px) {
+  .cta {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch; /* чтобы растягивались по ширине */
+    gap: 0.9rem; /* промежуток между кнопками */
+  }
+  .cta .btn {
+    width: 200px;
+    display: flex;
+  }
+  .wrap p {
+    /* 2–3% крупнее и чуток свободнее межстрочник */
+    font-size: 1.13rem;
+    line-height: 1.7;
+  }
+}
+@media (max-width: 480px) {
+  .wrap {
+    padding: 0 20px;
+  } /* чуть больше «воздуха» слева/справа */
+
+  .wrap p {
+    /* 2–3% крупнее и чуток свободнее межстрочник */
+    font-size: 1.5rem;
+    line-height: 1.7;
+  }
+  .wrap p,
+  .wrap li {
+    font-size: 1.3rem;
+  }
+  .wrap h1 {
+    /* 2–3% крупнее и чуток свободнее межстрочник */
+    font-size: 2rem;
+  }
+  .wrap h2 {
+    /* 2–3% крупнее и чуток свободнее межстрочник */
+    font-size: 1.7rem;
+  }
+
+  .wrap .meta,
+  .wrap .breadcrumbs,
+  .wrap figure figcaption {
+    font-size: 0.98rem; /* мелкий текст — до «нормального» */
+  }
+}
+.compare {
+  max-width: 960px;
+  margin: 24px auto;
+}
+.compare--inline {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 1fr; /* мобилки – 1 колонка */
+  align-items: start;
+}
+.compare--inline > h3 {
+  /* заголовок над двумя колонками */
+  margin: 0 0 4px;
+  grid-column: 1 / -1;
+}
+@media (min-width: 900px) {
+  .compare--inline {
+    grid-template-columns: 1fr 1fr;
+  } /* на десктопе – 2 колонки */
+}
+.compare--inline > figure {
+  margin: 0;
+}
+.compare-item img,
+.compare-row img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+.post-footer {
+  margin-top: 28px;
+}
+
+.post-footer .signature {
+  font-style: normal;
+  font-size: 0.94rem;
+  font-weight: 400; /* легче, чем 500 */
+  line-height: 1.65;
+  margin: 0;
+  padding-top: 14px;
+  color: rgba(
+    17,
+    17,
+    17,
+    0.78
+  ); /* ~#111 с лёгкой прозрачностью — выглядит тоньше */
+  letter-spacing: 0.01em; /* очень деликатный трекинг */
+  -webkit-font-smoothing: auto; /* не «осветлять» шрифт на macOS */
+  text-rendering: optimizeLegibility;
+  border-top: 1px solid #ececec;
+}
+
+.post-footer .back-link {
+  background-color: #f700ff2e;
+  opacity: 0.92;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: opacity 0.2s, border-color 0.2s;
+  width: 200px;
+  display: flex;
+} /* была .85 — выглядела бледнее */
+
+/* ссылка "назад" чуть отделим */
+.post-footer .post-nav {
+  margin-top: 12px;
+  display: flex;
+}
+
+.post-footer .back-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(212, 175, 55, 0.25);
+}
+
+/* тёмная тема */
+
+/* страховка: даже если где-то оставишь <em>, он не будет курсивом в футере */
+.post-footer em {
+  font-style: normal;
+}
+
+@media (max-width: 480px) {
+  .wrap p {
+    font-size: 1.5rem;
+    line-height: 1.7;
+  }
+  .wrap p,
+  .wrap li {
+    font-size: 1.3rem;
+  } /* было: .wrap p, li */
+}
+.wrap {
+  /* антиалиас убрать! */
+  -webkit-font-smoothing: auto;
+  /* локально делаем текст темнее именно в посте,
+     не трогая остальной сайт */
+  --text: #111;
+}
+
+/* Текст внутри статьи */
+section[itemprop='articleBody'] p,
+section[itemprop='articleBody'] li {
+  opacity: 1 !important;
+  color: var(--text) !important;
+  letter-spacing: normal !important;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue',
+    Arial, sans-serif !important;
+  -webkit-font-smoothing: auto !important;
+}
+/* Mobile: CTA в столбик + растяжение по ширине */
+@media (max-width: 480px) {
+  .cta {
+    flex-direction: column;
+  }
+  .cta .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
