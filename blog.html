@@ -14,7 +14,7 @@
       content="blog fotografia produktowa, zdjęcia produktów, fotografia reklamowa, e-commerce, studio fotograficzne Warszawa, Objeqtive"
     />
     <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://objeqtive.com/blog.html" />
+    <link rel="canonical" href="https://objeqtive.studio/blog.html" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
@@ -28,20 +28,19 @@
       property="og:description"
       content="Przewodniki, inspiracje i praktyczne wskazówki dotyczące zdjęć produktowych i reklamowych dla e-commerce."
     />
-    <meta property="og:url" content="https://objeqtive.com/blog.html" />
-    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://objeqtive.studio/blog.html" />
+    
 
-    <meta
+<!--     <meta
       property="og:image"
       content="https://objeqtive.com/assets/contact-preview.jpg"
-    />
+    /> -->
 
-    <!-- Language info -->
-    <meta name="language" content="pl" />
+    
 
     <title>Blog — Fotografia produktowa i reklama | Objeqtive (Warszawa)</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="favicon.ico" />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="icon" href="/favicon.ico" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -49,18 +48,28 @@
         "name": "Blog Objeqtive",
         "description": "Porady i inspiracje dotyczące fotografii produktowej i reklamowej dla e-commerce.",
         "inLanguage": "pl-PL",
-        "url": "https://objeqtive.com/blog.html",
+        "url": "https://objeqtive.studio/blog.html",
         "publisher": {
           "@type": "Organization",
-          "name": "Objeqtive",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://objeqtive.com/assets/logo.png"
-          }
+          "name": "Objeqtive"
+          
         },
         "blogPost": [
-          "https://objeqtive.com/posts/01_professional_photo.html",
-          "https://objeqtive.com/posts/blog-velcome.html"
+           {
+      "@type": "BlogPosting",
+      "url": "https://objeqtive.studio/posts/01_professional_photo.html",
+      "headline": "Fotografia produktowa — dlaczego warto?"
+    },
+    {
+      "@type": "BlogPosting",
+      "url": "https://objeqtive.studio/posts/03_katalog_or_ad.html",
+      "headline": "Kiedy wybrać zdjęcia katalogowe, a kiedy reklamowe?"
+    },
+    {
+      "@type": "BlogPosting",
+      "url": "https://objeqtive.studio/posts/02_przygotowywanie_do_sesji.html",
+      "headline": "Jak przygotować produkt do sesji zdjęciowej"
+    }
         ]
       }
     </script>
@@ -68,7 +77,7 @@
   <body>
     <div class="topbar">
       <div class="container_topBar">
-        <a class="logoClick" href="index.html">
+        <a class="logoClick" href="/">
           <div class="logo">OBJEQTIVE</div>
           <p>Photography & Videography</p>
         </a>
@@ -82,7 +91,7 @@
     <div class="layout">
       <aside class="sidebar">
         <div class="sidebar-top">
-          <a class="logoClick" href="index.html">
+          <a class="logoClick" href="/">
             <div class="logo">
               <h1>OBJEQTIVE STUDIO</h1>
               <p>Photography & Videography</p>
@@ -91,10 +100,10 @@
         </div>
         <div class="sidebar-middle">
           <nav class="nav">
-            <a href="index.html" class="nav-link">Gallery</a>
-            <a href="about.html" class="nav-link">About</a>
-            <a href="contact.html" class="nav-link">Contact</a>
-            <a href="blog.html" class="nav-link">Blog</a>
+            <a href="/" class="nav-link">Gallery</a>
+            <a href="/about.html" class="nav-link">About</a>
+            <a href="/contact.html" class="nav-link">Contact</a>
+            <a href="/blog.html" class="nav-link" aria-current="page">Blog</a>
           </nav>
         </div>
         <div class="sidebar-bottom">
@@ -113,7 +122,7 @@
         <h1>Blog</h1>
         <div class="blog-grid">
           <article class="blog-card">
-            <a href="posts/01_professional_photo.html">
+            <a href="/posts/01_professional_photo.html">
               <img
                 src="./blog-img/blog-prev/hands.webp"
                 alt="Sprzęt do fotografii produktowej: lampy błyskowe i aparat"
@@ -132,7 +141,7 @@
             </a>
           </article>
           <article class="blog-card">
-            <a href="posts/03_katalog_or_ad.html">
+            <a href="/posts/03_katalog_or_ad.html">
               <img
                 src="./blog-img/blog-prev/collage.webp"
                 alt="Kolaż zdjęć: katalogowe na białym tle i reklamowe w aranżacji"
@@ -150,7 +159,7 @@
             </a>
           </article>
           <article class="blog-card">
-            <a href="posts/02_przygotowywanie_do_sesji.html">
+            <a href="/posts/02_przygotowywanie_do_sesji.html">
               <img
                 src="./blog-img/blog-prev/clean.webp"
                 alt="Czyszczenie produktu przed sesją — ściereczka i pędzelek"
@@ -172,7 +181,7 @@
         </div>
       </main>
     </div>
-    <script src="script.js" defer></script>
-    <script src="burger.js" defer></script>
+    <script src="/script.js" defer></script>
+    <script src="/burger.js" defer></script>
   </body>
 </html>
