@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- META TAGS: objeqtive.com/contact.html -->
+
     <meta
       name="description"
       content="Porady o fotografii produktowej i reklamowej, case studies oraz praktyczne wskazówki dla e-commerce. Studio Objeqtive, Warszawa."
@@ -22,54 +22,57 @@
     <meta property="og:site_name" content="Objeqtive" />
     <meta
       property="og:title"
-      content="Blog — Fotografia produktowa i reklama | Objeqtive (Warszawa)"
+      content="Blog — Fotografia produktowa i reklamowa | Objeqtive (Warszawa)"
     />
     <meta
       property="og:description"
       content="Przewodniki, inspiracje i praktyczne wskazówki dotyczące zdjęć produktowych i reklamowych dla e-commerce."
     />
     <meta property="og:url" content="https://objeqtive.studio/blog.html" />
-    
 
-<!--     <meta
-      property="og:image"
-      content="https://objeqtive.com/assets/contact-preview.jpg"
-    /> -->
-
-    
-
-    <title>Blog — Fotografia produktowa i reklama | Objeqtive (Warszawa)</title>
+    <title>
+      Blog — Fotografia produktowa i reklamowa | Objeqtive (Warszawa)
+    </title>
     <link rel="stylesheet" href="/style.css" />
     <link rel="icon" href="/favicon.ico" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "Blog",
+        "@id": "https://objeqtive.studio/#blog",
         "name": "Blog Objeqtive",
         "description": "Porady i inspiracje dotyczące fotografii produktowej i reklamowej dla e-commerce.",
         "inLanguage": "pl-PL",
         "url": "https://objeqtive.studio/blog.html",
+        "image": "https://objeqtive.studio/velcome.png",
         "publisher": {
           "@type": "Organization",
-          "name": "Objeqtive"
-          
+          "@id": "https://objeqtive.studio/#organization",
+          "name": "Objeqtive Studio",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://objeqtive.studio/logo.png",
+            "width": 512,
+            "height": 512
+          },
+          "url": "https://objeqtive.studio/"
         },
         "blogPost": [
-           {
-      "@type": "BlogPosting",
-      "url": "https://objeqtive.studio/posts/01_professional_photo.html",
-      "headline": "Fotografia produktowa — dlaczego warto?"
-    },
-    {
-      "@type": "BlogPosting",
-      "url": "https://objeqtive.studio/posts/03_katalog_or_ad.html",
-      "headline": "Kiedy wybrać zdjęcia katalogowe, a kiedy reklamowe?"
-    },
-    {
-      "@type": "BlogPosting",
-      "url": "https://objeqtive.studio/posts/02_przygotowywanie_do_sesji.html",
-      "headline": "Jak przygotować produkt do sesji zdjęciowej"
-    }
+          {
+            "@type": "BlogPosting",
+            "url": "https://objeqtive.studio/posts/01_professional_photo.html",
+            "headline": "Fotografia produktowa — dlaczego warto?"
+          },
+          {
+            "@type": "BlogPosting",
+            "url": "https://objeqtive.studio/posts/03_katalog_or_ad.html",
+            "headline": "Kiedy wybrać zdjęcia katalogowe, a kiedy reklamowe?"
+          },
+          {
+            "@type": "BlogPosting",
+            "url": "https://objeqtive.studio/posts/02_przygotowywanie_do_sesji.html",
+            "headline": "Jak przygotować produkt do sesji zdjęciowej"
+          }
         ]
       }
     </script>
@@ -176,12 +179,11 @@
               </div>
             </a>
           </article>
-
-          <!-- Просто копируешь этот блок для новой статьи -->
         </div>
       </main>
     </div>
     <script src="/script.js" defer></script>
+    <script src="/gallery.js" defer></script>
     <script src="/burger.js" defer></script>
   </body>
 </html>
