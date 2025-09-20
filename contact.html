@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- META TAGS: objeqtive.com/contact.html -->
+    
 <meta name="description" content="Contact Objeqtive Studio in Warsaw to book professional product or commercial photography. Available in Poland and Europe.">
-<meta name="keywords" content="photography contact Warsaw, book photographer, zdjęcia produktowe kontakt, фотосъёмка Варшава, Objeqtive contact">
+<meta name="keywords" content="photography contact Warsaw, book photographer, предметная фотосъёмка Варшава, zdjęcia produktowe kontakt, фотосъёмка Варшава, Objeqtive contact">
 <meta name="author" content="Objeqtive Studio">
 <meta name="robots" content="index, follow">
 
@@ -16,9 +16,6 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Objeqtive Studio">
 <meta property="og:url" content="https://objeqtive.studio/contact.html">
-<!-- <meta property="og:image" content="https://objeqtive.studio/assets/contact-preview.jpg"> -->
-
-<!-- Language info -->
 
 
     <title>	Contact — Objeqtive Product Photography Studio</title>
@@ -26,21 +23,36 @@
     <link rel="stylesheet" href="/style.css" />
     <link rel="icon" href="/favicon.ico" />
     <script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"Organization",
-  "name":"Objeqtive Studio",
-  "url":"https://objeqtive.studio/",
-  "logo":"https://objeqtive.studio/favicon.ico",
-  "sameAs":["https://www.instagram.com/objeqtive.photography/"],
-  "contactPoint":[{
-    "@type":"ContactPoint",
-    "telephone":"+48-500-425-982",
-    "contactType":"customer service",
-    "areaServed":"PL,EU"
-  }]
-}
-</script>
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "@id": "https://objeqtive.studio/#organization",
+        "name": "Objeqtive Studio",
+        "url": "https://objeqtive.studio/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://objeqtive.studio/logo.png",
+          "width": 512,
+          "height": 512
+        },
+        "image": "https://objeqtive.studio/velcome.png",
+        "sameAs": [
+          "https://www.instagram.com/objeqtive.photography/"
+        ],
+        "contactPoint": [{
+          "@type": "ContactPoint",
+          "telephone": "+48-500-425-982",
+          "contactType": "customer service",
+          "areaServed": ["PL","EU"],
+          "availableLanguage": ["pl","en","ru"]
+        }],
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Warszawa",
+          "addressCountry": "PL"
+        }
+      }
+      </script>
   </head>
   <body>
     <div class="topbar">
@@ -91,9 +103,9 @@
         </div>
       </aside>
       <main class="contact-section">
-        <h4>
+        <p style="font-weight: bold; ">
           We work worldwide, regularly delivering projects across Europe.
-        </h4>
+        </p>
         <p>Our studio is located in Warsaw.</p>
         <hr></hr>
         <p class="lead">
@@ -125,6 +137,7 @@
       </main>
     </div>
     <script src="/script.js" defer></script>
+    <script src="/gallery.js" defer></script>
     <script src="/burger.js" defer></script>
   </body>
 </html>
