@@ -67,9 +67,10 @@ p {
   flex-shrink: 0;
   margin-bottom: 1.2rem;
 }
-.logo h1 {
+.logo .brand {
   font-size: 1.3rem;
   margin: 0;
+  font-weight: 700;
 }
 
 .logo p {
