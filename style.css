@@ -599,6 +599,119 @@ hr {
   border-color: rgba(212, 175, 55, 0.45);
 }
 
+/*
+------------------------------*/
+/* --- SEO block: minimal, premium typography --- */
+.seo-section {
+  --text: rgba(0, 0, 0, 0.88);
+  --muted: rgba(0, 0, 0, 0.62);
+  --line: rgba(0, 0, 0, 0.12);
+
+  max-width: 860px;
+  margin: 84px auto 120px;
+  padding: 0 28px;
+  color: var(--text);
+}
+
+.seo-section::before {
+  content: '';
+  display: block;
+  width: 72px;
+  height: 1px;
+  background: var(--line);
+  margin: 0 0 26px;
+}
+
+.seo-head h1 {
+  margin: 0 0 10px;
+  font-size: clamp(26px, 2.6vw, 40px);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  font-weight: 650;
+}
+
+.seo-head p {
+  margin: 0 0 16px;
+  max-width: 70ch;
+  color: var(--muted);
+  line-height: 1.65;
+  font-size: 15px;
+}
+
+.seo-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin: 6px 0 34px;
+}
+
+.seo-actions a {
+  color: var(--text);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  padding-bottom: 2px;
+}
+
+.seo-actions a:hover {
+  border-bottom-color: rgba(0, 0, 0, 0.55);
+}
+
+.seo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px 44px;
+  align-items: start;
+}
+
+.seo-card {
+  padding-top: 6px;
+}
+
+.seo-card h2 {
+  margin: 0 0 12px;
+  font-size: 16px;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  font-weight: 650;
+}
+
+.seo-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.seo-card li {
+  position: relative;
+  padding-left: 14px;
+  margin: 0 0 10px;
+  line-height: 1.6;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.seo-card li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.72em;
+  width: 5px;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.38);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .seo-section {
+    margin: 64px auto 96px;
+    padding: 0 20px;
+  }
+  .seo-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
 /* Мобильные поля, чтобы текст не лип к краям */
 @media (max-width: 768px) {
   .blog-section {
